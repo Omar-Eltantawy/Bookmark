@@ -33,7 +33,10 @@ function display(){
         <tr>
             <td>${i+1}</td>
             <td>${bookmarks[i].name}</td>
-            <td><button class="btn btn-success"><i class="fa-solid fa-eye pe-2 me-1"></i>Visit</button></td>
+            <td><a href="${bookmarks[i].url}" class="text-decoration-none text-light">
+                    <button class="btn btn-success"><i class="fa-solid fa-eye pe-2 me-1"></i>Visit</button>
+                </a>
+            </td>
             <td><button class="btn btn-danger" onclick={deleteBookmark(${i})}><i class="fa-solid fa-trash-can me-1"></i>Delete</button></td>
         </tr>
         `
