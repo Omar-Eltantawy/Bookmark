@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="container d-flex flex-column align-items-center justify-content-center pt-5">
+            <h1 class="position-relative">Bookmarker</h1>
+            <div class="bookmark-body my-5 py-4 w-100 d-flex flex-column justify-content-center align-items-center">
+                <h2 class="fs-4 fw-bold">
+                    <i class="fa-solid fa-bookmark"></i>
+                     Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="site-name w-100">
+                    <label for="bookmarkName"  class="mb-2">
+                        <i class="fa-solid fa-book-bookmark pe-2"></i>Site Name
+                    </label>
+                    <input type="text" name="site-name" id="bookmarkName" placeholder="Bookmark Name" class="form-control" oninput="bookmarkNameValidation()"> 
+                    <p id="nameMsg" class="d-none text-danger fw-bold ">Bookmark must Start With Capital Letter</p>
+                </div>
+                <div class="site-url w-100 my-3">
+                    <label for="bookmarkUrl" class="mb-2">
+                        <i class="fa-solid fa-link pe-2"></i>Site URL
+                    </label>
+                    <input type="text" name="site-url" id="bookmarkUrl" placeholder="Website URL" class="form-control" oninput="siteUrlValidation()">
+                    <p id="urlMsg" class="d-none text-danger fw-bold ">Site URL must be a valid URL</p>
+                </div>
+                <button class="btn btn-danger px-5 py-2 mt-3" onclick={addBookmark()}>Submit</button>
+            </div>
+            <table class="table mt-4 text-center bg-light">
+                <thead>
+                    <tr>
+                        <th class="text-capitalize">index</th>
+                        <th class="text-capitalize">Website Name</th>
+                        <th class="text-capitalize">Visit</th>
+                        <th class="text-capitalize">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableContent">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>Ay 7aga</td>
+                        <td><button class="btn btn-success"><i class="fa-solid fa-eye pe-2 me-1"></i>Visit</button></td>
+                        <td><button class="btn btn-danger"><i class="fa-solid fa-trash-can me-1"></i>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Ay 7aga</td>
+                        <td><button class="btn btn-success"><i class="fa-solid fa-eye pe-2 me-1"></i>Visit</button></td>
+                        <td><button class="btn btn-danger"><i class="fa-solid fa-trash-can me-1"></i>Delete</button></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

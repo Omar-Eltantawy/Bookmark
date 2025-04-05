@@ -1,0 +1,34 @@
+body {
+    font-family: "PT Sans Caption", sans-serif;
+}
+main{
+    min-height: 100vh;
+    background-color: #f7ecde;
+}
+main h1{
+    font-family: "Pacifico", cursive;
+    z-index: 99;
+}
+main h1::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    background-color: #ffc15e;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+main h1:hover::before{
+    height: 70%;
+}
+main .bookmark-body{
+    border-top: 2px dotted #000; 
+    border-bottom: 2px dotted #000; 
+}
+main .bookmark-body h2{
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
